@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.5.0">
+<eagle version="6.4">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -27,7 +27,7 @@
 <layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
-<layer number="20" name="Dimension" color="6" fill="1" visible="yes" active="yes"/>
+<layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="21" name="tPlace" color="16" fill="1" visible="yes" active="yes"/>
 <layer number="22" name="bPlace" color="14" fill="1" visible="yes" active="yes"/>
 <layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
@@ -79,15 +79,27 @@
 <layer number="105" name="tPlate" color="7" fill="1" visible="no" active="yes"/>
 <layer number="106" name="bPlate" color="7" fill="1" visible="no" active="yes"/>
 <layer number="107" name="Crop" color="7" fill="1" visible="no" active="yes"/>
-<layer number="108" name="tplace-old" color="10" fill="1" visible="yes" active="yes"/>
-<layer number="109" name="ref-old" color="11" fill="1" visible="yes" active="yes"/>
+<layer number="108" name="tplace-old" color="10" fill="1" visible="no" active="yes"/>
+<layer number="109" name="ref-old" color="11" fill="1" visible="no" active="yes"/>
+<layer number="110" name="fp0" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="111" name="LPC17xx" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="112" name="tSilk" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="113" name="IDFDebug" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="116" name="Patch_BOT" color="9" fill="4" visible="no" active="yes"/>
 <layer number="121" name="_tsilk" color="7" fill="1" visible="no" active="yes"/>
 <layer number="122" name="_bsilk" color="7" fill="1" visible="no" active="yes"/>
+<layer number="123" name="tTestmark" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="124" name="bTestmark" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="125" name="_tNames" color="7" fill="1" visible="no" active="yes"/>
+<layer number="126" name="_bNames" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="127" name="_tValues" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="128" name="_bValues" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="131" name="tAdjust" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="132" name="bAdjust" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="144" name="Drill_legend" color="7" fill="1" visible="no" active="yes"/>
 <layer number="151" name="HeatSink" color="7" fill="1" visible="no" active="yes"/>
-<layer number="199" name="Contour" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="152" name="_bDocu" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="199" name="Contour" color="7" fill="1" visible="no" active="yes"/>
 <layer number="200" name="200bmp" color="1" fill="10" visible="no" active="no"/>
 <layer number="201" name="201bmp" color="2" fill="1" visible="no" active="no"/>
 <layer number="202" name="202bmp" color="3" fill="1" visible="no" active="no"/>
@@ -113,6 +125,8 @@
 <layer number="222" name="222bmp" color="23" fill="1" visible="no" active="no"/>
 <layer number="223" name="223bmp" color="24" fill="1" visible="no" active="no"/>
 <layer number="224" name="224bmp" color="25" fill="1" visible="no" active="no"/>
+<layer number="248" name="Housing" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="249" name="Edge" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="250" name="Descript" color="3" fill="1" visible="no" active="no"/>
 <layer number="251" name="SMDround" color="12" fill="11" visible="no" active="no"/>
 <layer number="254" name="cooling" color="7" fill="1" visible="no" active="yes"/>
@@ -669,8 +683,7 @@ We've spent an enormous amount of time creating and checking these footprints an
 &lt;br&gt;&lt;br&gt;
 &lt;b&gt;Licensing:&lt;/b&gt; CC v3.0 Share-Alike You are welcome to use this library for commercial purposes. For attribution, we ask that when you begin to sell your device using our footprint, you email us with a link to the product being sold. We want bragging rights that we helped (in a very small part) to create your 8th world wonder. We would like the opportunity to feature your device on our homepage.</description>
 <packages>
-<package name="SDCARD_4UCONN">
-<description>4UConn part#19646</description>
+<package name="SD_1:1">
 <smd name="1" x="-1" y="6.77" dx="1.8" dy="0.9" layer="1"/>
 <smd name="2" x="-1" y="4.27" dx="1.8" dy="0.9" layer="1"/>
 <smd name="3" x="-1" y="2.52" dx="1.8" dy="0.9" layer="1"/>
@@ -680,14 +693,13 @@ We've spent an enormous amount of time creating and checking these footprints an
 <smd name="6" x="-1" y="-5.73" dx="1.8" dy="0.9" layer="1"/>
 <smd name="7" x="-1" y="-8.15" dx="1.8" dy="0.9" layer="1"/>
 <smd name="8" x="-1" y="-9.85" dx="1.8" dy="0.9" layer="1"/>
-<smd name="SH@1" x="20" y="14.75" dx="2" dy="1.4" layer="1"/>
-<smd name="SH@2" x="21.15" y="-14.75" dx="2" dy="1.4" layer="1"/>
+<smd name="SH@1" x="20" y="14.496" dx="2" dy="1.4" layer="1"/>
+<smd name="SH@2" x="21.15" y="-13.589" dx="2" dy="1.527" layer="1"/>
 <smd name="WP" x="-1" y="-13" dx="1.8" dy="1.1" layer="1"/>
 <smd name="9" x="-1" y="9.27" dx="1.8" dy="0.9" layer="1"/>
 <wire x1="0" y1="14.25" x2="28.8" y2="14.25" width="0.127" layer="51"/>
 <wire x1="28.8" y1="14.25" x2="28.8" y2="10" width="0.127" layer="51"/>
-<wire x1="28.8" y1="10" x2="28.8" y2="-8" width="0.127" layer="51"/>
-<wire x1="28.8" y1="-8" x2="28.8" y2="-10.5" width="0.127" layer="51"/>
+<wire x1="28.8" y1="10" x2="28.8" y2="-10.5" width="0.127" layer="51"/>
 <wire x1="28.8" y1="-10.5" x2="28.8" y2="-14.25" width="0.127" layer="51"/>
 <wire x1="28.8" y1="-14.25" x2="0" y2="-14.25" width="0.127" layer="51"/>
 <wire x1="0" y1="-14.25" x2="0" y2="14.25" width="0.127" layer="51"/>
@@ -1064,7 +1076,7 @@ design rules under a new name.</description>
 </autorouter>
 <elements>
 <element name="U$1" library="SparkFun" package="SFE-NEW-WEBLOGO" value="LOGO-SFENEW" x="19.05" y="6.3246" rot="MR90"/>
-<element name="U1" library="SparkFun-Connectors" package="SDCARD_4UCONN" value="SD_CARD_SOCKET4UCON" x="10.16" y="16.51"/>
+<element name="U1" library="SparkFun-Connectors" package="SD_1:1" value="SD_CARD_SOCKET" x="10.16" y="16.51"/>
 <element name="JP1" library="SparkFun-Connectors" package="1X12_HOLES_ONLY" value="M12POGOPIN_HOLES_ONLY" x="6.858" y="2.54" rot="MR90"/>
 <element name="U$3" library="SparkFun-Aesthetics" package="OSHW-LOGO-S" value="OSHW-LOGOS" x="17.78" y="16.51" rot="MR90"/>
 <element name="JP5" library="SparkFun-Connectors" package="1X10" value="M10&quot;" x="1.27" y="5.08" rot="R90"/>
