@@ -3714,11 +3714,6 @@ We've spent an enormous amount of time creating and checking these footprints an
 &lt;br&gt;&lt;br&gt;
 &lt;b&gt;Licensing:&lt;/b&gt; CC v3.0 Share-Alike You are welcome to use this library for commercial purposes. For attribution, we ask that when you begin to sell your device using our footprint, you email us with a link to the product being sold. We want bragging rights that we helped (in a very small part) to create your 8th world wonder. We would like the opportunity to feature your device on our homepage.</description>
 <packages>
-<package name="CREATIVE_COMMONS@1">
-<text x="-20.32" y="5.08" size="1.778" layer="27">Released under the Creative Commons Attribution Share-Alike 3.0 License</text>
-<text x="0" y="2.54" size="1.778" layer="27">http://creativecommons.org/licenses/by-sa/3.0</text>
-<text x="11.43" y="0" size="1.778" layer="27">Designed by:</text>
-</package>
 <package name="OSHW-LOGO-S">
 <polygon width="0.15" layer="21">
 <vertex x="0.3947" y="-0.9528" curve="9.498218"/>
@@ -3847,11 +3842,6 @@ We've spent an enormous amount of time creating and checking these footprints an
 <wire x1="0" y1="2.54" x2="-0.762" y2="1.27" width="0.254" layer="94"/>
 <text x="-1.016" y="3.556" size="1.778" layer="96">&gt;VALUE</text>
 <pin name="VCC" x="0" y="0" visible="off" length="short" direction="sup" rot="R90"/>
-</symbol>
-<symbol name="CREATIVE_COMMONS">
-<text x="0" y="5.08" size="1.778" layer="95">Released under the Creative Commons Attribution Share-Alike 3.0 License</text>
-<text x="0" y="2.54" size="1.778" layer="95">http://creativecommons.org/licenses/by-sa/3.0</text>
-<text x="0" y="0" size="1.778" layer="95">Design by:</text>
 </symbol>
 <symbol name="OSHW-LOGO">
 <rectangle x1="-9.5059" y1="-9.0106" x2="-9.4043" y2="-8.9979" layer="94"/>
@@ -7473,19 +7463,6 @@ We've spent an enormous amount of time creating and checking these footprints an
 </device>
 </devices>
 </deviceset>
-<deviceset name="CREATIVE_COMMONS">
-<description>Creative Commons License summary</description>
-<gates>
-<gate name="G$1" symbol="CREATIVE_COMMONS" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="CREATIVE_COMMONS@1">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
 <deviceset name="OSHW-LOGO">
 <description>&lt;b&gt;Open Source Hardware Logo&lt;/b&gt; This logo indicates the piece of hardware it is found on incorporates a OSHW license and/or adheres to the definition of open source hardware found here: http://freedomdefined.org/OSHW</description>
 <gates>
@@ -7544,7 +7521,6 @@ Standard 8.5x11 US Letter frame</description>
 <part name="P+1" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
 <part name="P+2" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
 <part name="GND2" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
-<part name="U$2" library="SparkFun-Aesthetics" deviceset="CREATIVE_COMMONS" device=""/>
 <part name="U$3" library="SparkFun-Aesthetics" deviceset="OSHW-LOGO" device="S"/>
 <part name="JP5" library="SparkFun-Connectors" deviceset="M10" device="&quot;"/>
 <part name="JP2" library="SparkFun" deviceset="FIDUCIAL" device="UFIDUCIAL"/>
@@ -7553,9 +7529,6 @@ Standard 8.5x11 US Letter frame</description>
 <sheets>
 <sheet>
 <plain>
-<text x="22.86" y="5.08" size="1.778" layer="97">A.Weiss</text>
-<text x="2.54" y="180.34" size="1.778" layer="97">Revision Notes:</text>
-<text x="2.54" y="177.8" size="1.778" layer="97">v20: new SD socket, extra pin holes, standoffs</text>
 <text x="68.58" y="88.9" size="1.778" layer="97">extra pins</text>
 <text x="166.116" y="11.684" size="2.54" layer="94">A. Weiss</text>
 <text x="149.606" y="6.604" size="2.54" layer="94">Revised by: Patrick Alberts</text>
@@ -7576,7 +7549,6 @@ Standard 8.5x11 US Letter frame</description>
 <instance part="P+1" gate="1" x="137.16" y="127"/>
 <instance part="P+2" gate="1" x="106.68" y="127"/>
 <instance part="GND2" gate="1" x="106.68" y="93.98"/>
-<instance part="U$2" gate="G$1" x="5.08" y="5.08"/>
 <instance part="U$3" gate="G$1" x="132.08" y="10.16"/>
 <instance part="JP5" gate="G$1" x="93.98" y="116.84"/>
 <instance part="JP2" gate="G$1" x="218.44" y="43.18"/>
