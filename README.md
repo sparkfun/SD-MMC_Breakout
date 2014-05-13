@@ -8,8 +8,8 @@ This breakout board allows you to breakout the SD/MMC socket to a standard 0.1" 
 
 Repository Contents
 -------------------
+* **/Fritzing** - Fritzing diagram for the board (.fzpz)
 * **/Hardware** - All Eagle design files (.brd, .sch)
-
 
 License Information
 -------------------
