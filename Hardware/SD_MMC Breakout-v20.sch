@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.4">
+<eagle version="6.5.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -2555,20 +2555,6 @@
 <vertex x="0.4954" y="1.8872" curve="-50.628124"/>
 </polygon>
 </package>
-<package name="FIDUCIAL-1.5X3">
-<circle x="0" y="0" radius="0.9055" width="1.27" layer="29"/>
-<smd name="1" x="0" y="0" dx="1.5" dy="1.5" layer="1" roundness="100" cream="no"/>
-</package>
-<package name="FIDUCIAL-1X2">
-<smd name="1" x="0" y="0" dx="1" dy="1" layer="1" roundness="100" cream="no"/>
-</package>
-<package name="FIDUCIAL-1X2.5">
-<circle x="0" y="0" radius="0.9" width="1.27" layer="29"/>
-<smd name="1" x="0" y="0" dx="1" dy="1" layer="1" roundness="100" cream="no"/>
-</package>
-<package name="MICRO-FIDUCIAL">
-<smd name="1" x="0" y="0" dx="0.635" dy="0.635" layer="1" roundness="100" cream="no"/>
-</package>
 </packages>
 <symbols>
 <symbol name="LOGO1">
@@ -2577,11 +2563,6 @@
 <wire x1="7.62" y1="-2.54" x2="7.62" y2="5.08" width="0.254" layer="94"/>
 <wire x1="7.62" y1="5.08" x2="-2.54" y2="5.08" width="0.254" layer="94"/>
 <text x="0" y="0" size="1.9304" layer="94">SFE</text>
-</symbol>
-<symbol name="FIDUCIAL">
-<wire x1="-0.762" y1="0.762" x2="0.762" y2="-0.762" width="0.254" layer="94"/>
-<wire x1="0.762" y1="0.762" x2="-0.762" y2="-0.762" width="0.254" layer="94"/>
-<circle x="0" y="0" radius="1.27" width="0.254" layer="94"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -2613,35 +2594,6 @@ This is the standard Spark Fun Electronics PCB logo.</description>
 </technologies>
 </device>
 <device name="SK" package="SFE-LOGO-FLAME">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="FIDUCIAL" prefix="JP">
-<description>&lt;b&gt;Fiducial Alignment Points&lt;/b&gt;
-Various fiducial points for machine vision alignment.</description>
-<gates>
-<gate name="G$1" symbol="FIDUCIAL" x="0" y="0"/>
-</gates>
-<devices>
-<device name="1.5X3" package="FIDUCIAL-1.5X3">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-<device name="1X2" package="FIDUCIAL-1X2">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-<device name="1X2.5" package="FIDUCIAL-1X2.5">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-<device name="UFIDUCIAL" package="MICRO-FIDUCIAL">
 <technologies>
 <technology name=""/>
 </technologies>
@@ -3325,6 +3277,12 @@ We've spent an enormous amount of time creating and checking these footprints an
 <text x="-20.32" y="5.08" size="1.778" layer="51">Released under the Creative Commons Attribution Share-Alike 4.0 License</text>
 <text x="0" y="2.54" size="1.778" layer="51"> https://creativecommons.org/licenses/by-sa/4.0/</text>
 <text x="11.43" y="0" size="1.778" layer="51">Designed by:</text>
+</package>
+<package name="FIDUCIAL-1X2">
+<smd name="1" x="0" y="0" dx="1" dy="1" layer="1" roundness="100" cream="no"/>
+</package>
+<package name="MICRO-FIDUCIAL">
+<smd name="1" x="0" y="0" dx="0.635" dy="0.635" layer="1" roundness="100" cream="no"/>
 </package>
 </packages>
 <symbols>
@@ -6931,6 +6889,11 @@ We've spent an enormous amount of time creating and checking these footprints an
 <text x="2.54" y="24.13" size="1.9304" layer="94"> https://creativecommons.org/licenses/by-sa/4.0/</text>
 <text x="1.27" y="11.43" size="2.54" layer="94">Design by:</text>
 </symbol>
+<symbol name="FIDUCIAL">
+<wire x1="-0.762" y1="0.762" x2="0.762" y2="-0.762" width="0.254" layer="94"/>
+<wire x1="0.762" y1="0.762" x2="-0.762" y2="-0.762" width="0.254" layer="94"/>
+<circle x="0" y="0" radius="1.27" width="0.254" layer="94"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="GND" prefix="GND">
@@ -6997,6 +6960,25 @@ Standard 8.5x11 US Letter frame</description>
 </device>
 </devices>
 </deviceset>
+<deviceset name="FIDUCIAL" prefix="FID">
+<description>&lt;b&gt;Fiducial Alignment Points&lt;/b&gt;
+Various fiducial points for machine vision alignment.</description>
+<gates>
+<gate name="G$1" symbol="FIDUCIAL" x="0" y="0"/>
+</gates>
+<devices>
+<device name="1X2" package="FIDUCIAL-1X2">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="UFIDUCIAL" package="MICRO-FIDUCIAL">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
 </devicesets>
 </library>
 </libraries>
@@ -7018,8 +7000,8 @@ Standard 8.5x11 US Letter frame</description>
 <part name="GND2" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="U$3" library="SparkFun-Aesthetics" deviceset="OSHW-LOGO" device="S"/>
 <part name="JP5" library="SparkFun-Connectors" deviceset="M10" device="&quot;"/>
-<part name="JP2" library="SparkFun" deviceset="FIDUCIAL" device="UFIDUCIAL"/>
-<part name="JP3" library="SparkFun" deviceset="FIDUCIAL" device="UFIDUCIAL"/>
+<part name="FID1" library="SparkFun-Aesthetics" deviceset="FIDUCIAL" device="1X2"/>
+<part name="FID2" library="SparkFun-Aesthetics" deviceset="FIDUCIAL" device="1X2"/>
 </parts>
 <sheets>
 <sheet>
@@ -7042,8 +7024,8 @@ Standard 8.5x11 US Letter frame</description>
 <instance part="GND2" gate="1" x="106.68" y="93.98"/>
 <instance part="U$3" gate="G$1" x="132.08" y="10.16"/>
 <instance part="JP5" gate="G$1" x="93.98" y="116.84"/>
-<instance part="JP2" gate="G$1" x="218.44" y="43.18"/>
-<instance part="JP3" gate="G$1" x="223.52" y="43.18"/>
+<instance part="FID1" gate="G$1" x="243.84" y="33.02"/>
+<instance part="FID2" gate="G$1" x="243.84" y="25.4"/>
 </instances>
 <busses>
 </busses>
